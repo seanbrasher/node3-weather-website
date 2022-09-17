@@ -5,6 +5,7 @@ const { response } = require('express');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
+//kick off web server
 const app = express();
 
 //define paths for express config
