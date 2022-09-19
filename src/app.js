@@ -67,6 +67,7 @@ app.get('/weather', (req, res) => {
                     forecast: forecastData.description,
                     temperature: forecastData.temperature,
                     location,
+                    weatherIcon: forecastData.weatherIcon,
                     address: req.query.address
                 });
             }

@@ -2,6 +2,7 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
+const weatherIconImageTag = document.querySelector('#weatherIconImage');
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault(); //don't reload the page
@@ -22,6 +23,7 @@ weatherForm.addEventListener('submit', (e) => {
 
             messageOne.textContent = 'Location: ' + data.location;
             messageTwo.textContent = 'Weather: ' + data.forecast + ' with temperature of ' + data.temperature ;
+            weatherIconImageTag.src = data.weatherIcon;
         })
     })
 
